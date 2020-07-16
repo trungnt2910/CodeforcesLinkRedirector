@@ -1,0 +1,13 @@
+{
+  "name": "Codeforces Redirecter",
+  "description": "Redirect Codeforces from Problemset to Contest problems",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {"scripts":["background.js"]},
+  "permissions": [
+    "webRequest",
+    "*://codeforces.com/*",
+    "*://www.codeforces.com/*",
+    "webRequestBlocking"
+  ]
+}
