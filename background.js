@@ -1,7 +1,7 @@
 var contestLink = "https://codeforces.com/contest/";
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
-         return {redirectUrl: contestLink + details.url.match(/^https?:\/\/[^\/]+\/[^\/]+\/[^\/]+\/+([\S\s]*)[^\/]/)[1] + "problem/" + details.url.match(/^https?:\/\/[^\/]+\/[^\/]+\/[^\/]+\/[^\/]+\/([\S\s]*)/)[1]};
+         return {redirectUrl: contestLink + details.url.match(/^https?:\/\/[^\/]+\/[^\/]+\/[^\/]+\/+([\S\s]*)[\/]/)[1] + "/problem/" + details.url.match(/^https?:\/\/[^\/]+\/[^\/]+\/[^\/]+\/[^\/]+\/([\S\s]*)/)[1]};
     },
     {
         urls: [
